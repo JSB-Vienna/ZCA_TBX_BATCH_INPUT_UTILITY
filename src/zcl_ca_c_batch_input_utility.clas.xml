@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CA_C_BATCH_INPUT_UTILITY</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CA-TBX: Constants and value checks for batch input utility</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BI_ACTIVE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value of SY-BINPT during BI processing</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CATT_MODE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CATT mode</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check value against fixed_values</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_BI_ACTIVE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid SY-BINPT activation value passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_CATT_MODE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid CATT mode passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_NO_BI_END_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid batch input ending option passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_PROCESSING_MODE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid processing mode passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_QUIT_AT_COMMIT_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid commit termination option passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_UPDATE_MODE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid update mode passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_USE_SCREEN_SIZE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid screen size passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>NO_BI_END</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Options for SY-BINPT after batch input completion</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PROCESSING_MODE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Processing modes for CALL TRANSACTION</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>QUIT_AT_COMMIT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CALL TRANSACTION USING... is not completed by COMMIT</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SINGLETON_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Instance of the class itself</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_MODE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update mode</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>USE_SCREEN_SIZE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Used screen size for batch input execution</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <SCONAME>PARAM_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of field/parameter for output in error message</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value under test</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: File handling errors</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Class instance</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_BI_ACTIVE_VALID</CMPNAME>
+     <SCONAME>BI_ACTIVE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>SY-BINPT activation value</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_BI_ACTIVE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_CATT_MODE_VALID</CMPNAME>
+     <SCONAME>CATT_MODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>CATT mode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_CATT_MODE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_NO_BI_END_VALID</CMPNAME>
+     <SCONAME>NO_BI_END</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Batch input ending option</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_NO_BI_END_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_PROCESSING_MODE_VALID</CMPNAME>
+     <SCONAME>PROCESSING_MODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Processing mode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_PROCESSING_MODE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_QUIT_AT_COMMIT_VALID</CMPNAME>
+     <SCONAME>QUIT_AT_COMMIT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Commit termination option</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_QUIT_AT_COMMIT_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_UPDATE_MODE_VALID</CMPNAME>
+     <SCONAME>UPDATE_MODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update mode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_UPDATE_MODE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_USE_SCREEN_SIZE_VALID</CMPNAME>
+     <SCONAME>USE_SCREEN_SIZE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen size for execution</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_USE_SCREEN_SIZE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

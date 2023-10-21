@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CA_BATCH_INPUT_UTILITY</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CA-TBX: Batch input utility</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Call transaction / append transaction data to session</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CLOSE_GROUP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Closing batch input session</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Constructor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Factory for a new BI session, incl. open of the session</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FACTORY_FOR_TRANSACTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Factory for data collection for a single transaction</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Returns the current batch input data to change them</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_OPTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Returns current controlling options to change them</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_BI_OPTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Constants and value checks for batch input utility</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_OPTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Controlling options for batch input processing</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_BI_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Batch Input data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_IS_SESSION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = OPEN_GROUP executed for a new BI session</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>RESET_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Reset current batch input data, e. g. for a new transaction</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Replacement (!) of current batch input data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_DYNPRO</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set program name and next screen number</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set field name and value, inclusive the value conversion</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_OPTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Replacement (!) of current controlling options</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_OPTIONS_FOR_BGR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set standard controlling options for background processing</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_OPTIONS_FOR_DIA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set standard controlling options for dialog processing</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <SCONAME>ET_MESSAGES</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table with collected messages during CALL ta USING ...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <SCONAME>EV_SUBRC_CALL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return code of transaction call</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <SCONAME>IV_AUTHORITY_CHECK</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = With authority check on transaction code</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <SCONAME>IV_INIT_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Initialize BI data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <SCONAME>IV_TRANSACTION_CODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Transactions code to be processed</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_TRANSACTION</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <SCONAME>IV_GROUP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of Batch input session</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <SCONAME>IV_HOLDDATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Start date of session / locked until (see descr. data elem.)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <SCONAME>IV_KEEP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Keep session after execution</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <SCONAME>IV_USER</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>User id for authority check and history</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common object: Batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_SESSION</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_TRANSACTION</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common object: Batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FACTORY_FOR_TRANSACTION</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DATA</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Current batch input data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_OPTIONS</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Current BI controlling options</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_DATA</CMPNAME>
+     <SCONAME>IT_BI_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>New or changed batch input data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_DYNPRO</CMPNAME>
+     <SCONAME>IV_DYNPRO</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Batch input screen number</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_DYNPRO</CMPNAME>
+     <SCONAME>IV_PROGRAM</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Batch input program name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_CURRENCY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Currency for an amount</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Batch input field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_IGNORE_INITIAL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Ignore initial value</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_IS_BAPI_AMOUNT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Use special conversion for BAPI amount</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_NO_CONVERSION</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = No conversion into external format</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_UNIT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Unit of measure for a quantity</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>IV_VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value in SAP internal format, automatically converted</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_CONV</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Conversion failed</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_OPTIONS</CMPNAME>
+     <SCONAME>IS_OPTIONS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>New or changed controlling options</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_OPTIONS</CMPNAME>
+     <SCONAME>ZCX_CA_BATCH_INPUT_UTILITY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Error in batch input utility</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
