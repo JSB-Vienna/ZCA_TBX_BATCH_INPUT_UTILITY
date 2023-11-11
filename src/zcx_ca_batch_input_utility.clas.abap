@@ -1,4 +1,4 @@
-"! <p class="shorttext synchronized" lang="en">CA-TBX: Error in batch input utility</p>
+"! <p class="shorttext synchronized" lang="en">CA-TBX exception: Batch input utility error occured</p>
 CLASS zcx_ca_batch_input_utility DEFINITION
   PUBLIC
   INHERITING FROM zcx_ca_param
