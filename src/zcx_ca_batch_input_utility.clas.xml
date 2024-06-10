@@ -5,7 +5,7 @@
    <VSEOCLASS>
     <CLSNAME>ZCX_CA_BATCH_INPUT_UTILITY</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>CA-TBX exception: Batch input utility error occured</DESCRIPT>
+    <DESCRIPT>CA-TBX: Error in batch input utility</DESCRIPT>
     <CATEGORY>40</CATEGORY>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
